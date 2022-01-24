@@ -1,16 +1,42 @@
-void main(List<String> arguments) {
-  // int a = 5;
-  // int b = a--;
-  // int c = ++b;
-  // int d = b += 2;
+import 'dart:io';
 
-  // print(a);
-  // print(b);
-  // print(c);
-  // print(d);
-  // print(b);
-  const value = 9;
-  if (value % 3 == 0) {
-    print('heello');
+import 'cart.dart';
+
+void main(List<String> arguments) {
+  stdout
+      .write('Please Select (v)iew items, (s)elect item, (c)heckout ,(e)xit :');
+  final selected = stdin.readLineSync();
+  Cart cart = Cart();
+
+  // while (true) {
+  switch (selected) {
+    case 'v':
+    case 'V':
+      {
+        print("print V");
+        print(cart);
+      }
+      break;
+
+    case 's':
+    case 'S':
+      {
+        print("print S");
+      }
+      break;
+
+    case 'e':
+    case 'E':
+      {
+        print("print e");
+      }
+      break;
+
+    default:
+      {
+        print("Invalid choice");
+      }
+      break;
   }
+  // }
 }
